@@ -6,7 +6,7 @@ Pipeline :
 
 S3 -> Snowflake -> dbt -> Snowflake -> BI (TODO)
 
-![Pipeline](dbt.jpg)
+![Pipeline](medias/dbt.jpg)
 
 
 ## Setup:
