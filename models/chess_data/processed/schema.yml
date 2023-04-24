@@ -1,0 +1,33 @@
+version: 2
+models:
+  - name: players_stats
+    description: "Table containing player data"
+    database: chess
+    schema: processed
+    columns:
+      - name: uuid
+        description: "Player unique id"
+        tests:
+          - unique
+      - name: username
+        description: "Player's username"
+      - name: rating
+        description: Player's rating (ELO)"
+      - name: max_accuracy
+        description: "Player's maximum accuracy"
+      - name: min_accuracy
+        description: "Player's minimum accuracy"
+      - name: avg_accuracy
+        description: "Player's average accuracy"
+      - name: amount_games
+        description: "Player's amount of games"
+      - name: won_games
+        description: "Player's amount of won games"
+      - name: lost_games
+        description: "Player's amount of lost games"
+      - name: draw_games
+        description: "Player's amount of draw games"
+      - name: resigned_games
+        description: "Player's amount of resigned games"
+    tags:
+      - my_tag

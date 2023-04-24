@@ -1,0 +1,15 @@
+version: 2
+
+macros:
+  - name: generate_source
+    description: A macro to generate source tables and columns from database_name.information_schema.columns
+    arguments:
+      - name: database_name
+        type: string
+        description: The database name
+      - name: schema_name
+        type: string
+        description: The schema name
+      - name: source_name
+        type: string
+        description: The name of the source. For example, `raw_accounting`

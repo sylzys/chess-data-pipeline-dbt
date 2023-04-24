@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: chess_data_pipeline_dbt
+    # Config indicated by + and applies to all files under models/example/
+    staging:
+      +materialized: view
+    sources:
+      - name: my_source_name
+        schema: staging_schema
+        tables:
+          - name: players
+            description: "Table holding the information of all the GM players"
+            loader: parquet
+            path: "s3://chess-storage/staging/*/*/*/*/*.snappy.parquet"
+    staging_schema:
+      target: dev
+      schema: staging_schema
+      outputs:
+        dev:
+          type: athena
+          database: AwsDataCatalog
+          region_name: eu-west-3
+          s3_staging_dir: s3://chess-storage/athena_tmp_queries
+          s3_cleanup: false
+          iam_role: "arn:aws:iam::111122223333:role/MyRedshiftRole"

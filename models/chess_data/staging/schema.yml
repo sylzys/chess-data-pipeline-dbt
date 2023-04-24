@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: staging_data
+    description: "Description of my_table"
+    database: chess
+    schema: staging
+    columns:
+      - name: url
+        description: "Description of url column"
+        tests:
+          - unique
+      - name: end_time
+        description: "Description of end_time column"
+      - name: rated
+        description: "Description of rated column"
+      - name: uuid
+        description: "Description of uuid column"
+      - name: time_class
+        description: "Description of time_class column"
+      - name: white
+        description: "Description of white column"
+      - name: black
+        description: "Description of black column"
+      - name: opening
+        description: "Description of opening column"
+      - name: opening_name
+        description: "Description of opening_name column"
+      - name: accuracies
+        description: "Description of accuracies column"
+    tags:
+      - my_tag
