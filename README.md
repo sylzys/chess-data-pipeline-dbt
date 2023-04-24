@@ -19,13 +19,13 @@ Follow the instructions in the [Snowflake documentation](https://docs.snowflake.
 - Create a policy to allow Snowflake Read/Write access to the S3 bucket
 - Create a stage in Snowflake
 - Bulk load the data from S3 to Snowflake
-- Install dbt (https://docs.getdbt.com/dbt-cli/installation)
-
-```bash pip install dbt-snowflake```
+- Install dbt and Snowflake connector (https://docs.getdbt.com/dbt-cli/installation) ```bash pip install dbt-snowflake```
 
 - Create a dbt profile (https://docs.getdbt.com/dbt-cli/configure-your-profile)
 - Create a dbt project (https://docs.getdbt.com/reference/commands/init)
 ```bash dbt init my_project```
+- Install dbt packages (https://docs.getdbt.com/docs/package-management)
+```bash dbt deps```
 - Create a dbt model (https://docs.getdbt.com/docs/building-a-dbt-project/building-models)
 - Test and run the model
 ```bash dbt test; dbt run```
